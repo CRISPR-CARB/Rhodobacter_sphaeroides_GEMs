@@ -6,7 +6,7 @@ medium:
       filename: ""
       label: "All medium metabolites except the ones with Carbon"
     m9_min_media:
-      filename: ""
+      filename: "m9_min_media.csv"
       label: "M9 Minimal Media"
 essentiality:
   path: "essentiality/"
@@ -17,6 +17,5 @@ growth:
     biolog_carbon:
       filename: "biolog_results.csv"
       medium: whole_medium_no_carbon
-      objective: Biomass
       label: "no carbon data"
 minimal_growth_rate: 0.05
