@@ -1,21 +1,18 @@
 version: "0.1"
 medium:
-  path: "rhodobacter_memote/data/media/"
+  path: "media/"
   definitions:
     whole_medium_no_carbon:
-      filename: ""
-      label: "All medium metabolites except the ones with Carbon"
-    m9_min_media:
+      filename: "sist_min_media.csv"
+      label: "Medium metabolites no carbon"
+    min_media_no_carbon:
       filename: "m9_min_media.csv"
       label: "M9 Minimal Media"
-essentiality:
-  path: "essentiality/"
-  experiments:
 growth:
-  path: "rhodobacter_memote/data/media/"
+  path: "growth/"
   experiments:
     biolog_carbon:
+      medium: min_media_no_carbon
       filename: "biolog_results.csv"
-      medium: whole_medium_no_carbon
       label: "no carbon data"
 minimal_growth_rate: 0.05

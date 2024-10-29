@@ -1,6 +1,6 @@
 exchange,growth,uptake
-EX_succ_e,yes,2500
-EX_etoh_e,yes,200
-EX_mal_e,yes,1500
-EX_cit_e,yes,2000
-EX_glc_D_e,yes,1000
+EX_succ_e,yes,25
+EX_etoh_e,yes,20
+EX_mal_e,yes,15
+EX_cit_e,yes,20
+EX_glc_D_e,yes,10

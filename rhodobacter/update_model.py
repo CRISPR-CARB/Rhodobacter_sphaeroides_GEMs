@@ -20,7 +20,7 @@ _log = logging.getLogger()
 
 #adding additional metabolites
 _path = pathlib.Path(__file__).parent
-_f_path = _path.joinpath('C:/Users/lint730/GEM_repos/csc009-gem/csc009/data/growth/custom_plate.csv').__str__()
+_f_path = _path.joinpath('C:/Users/lint730/GEM_repos/Rhodobacter_sphaeroides_GEMs/rhodobacter/data/growth/custom_plate.csv').__str__()
 
 starting_model = read_sbml_model("model.xml")
 output_model_name = 'model_gapfilled.xml'
