@@ -16,4 +16,4 @@ MODEL="/rcfs/projects/ppi_concerto/best_assemblies/curtobacterium_CSC_009/csc009
 MEDIADB="/rcfs/projects/ppi_concerto/best_assemblies/curtobacterium_CSC_009/csc009-gem/csc009/data/media/CarveMeMinimalMediaFile.csv"
 OUTPUT="/rcfs/projects/ppi_concerto/best_assemblies/curtobacterium_CSC_009/csc009-gem/csc009/model_gapfilled.xml"
 
-gapfill $MODEL -m BL[dextrin],BL[pectin],BL[acgal],BL[abt__D],BL[arbt],BL[madg],BL[pala],BL[raffin],BL[salcn],BL[stys],BL[xylt],BL[gam],BL[Dara14lac] --mediadb $MEDIADB -o $OUTPUT --fbc2 -v
+gapfill $MODEL -m BL[dextrin],BL[pectin],BL[acgal],BL[abt__D],BL[arbt],BL[madg],BL[pala],BL[raffin],BL[salcn],BL[stys],BL[xylt],BL[gam],BL[Dara14lac],MM[cl],MM[na1] --mediadb $MEDIADB -o $OUTPUT --fbc2 -v
