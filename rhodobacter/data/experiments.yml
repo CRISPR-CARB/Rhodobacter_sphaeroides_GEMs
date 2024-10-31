@@ -1,0 +1,18 @@
+version: "0.1"
+medium:
+  path: "media/"
+  definitions:
+    whole_medium_no_carbon:
+      filename: "sist_min_media.csv"
+      label: "Medium metabolites no carbon"
+    min_media_no_carbon:
+      filename: "m9_min_media.csv"
+      label: "M9 Minimal Media"
+growth:
+  path: "growth/"
+  experiments:
+    biolog_carbon:
+      medium: min_media_no_carbon
+      filename: "biolog_results.csv"
+      label: "no carbon data"
+minimal_growth_rate: 0.05
