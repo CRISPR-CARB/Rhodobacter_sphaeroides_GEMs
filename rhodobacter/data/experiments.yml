@@ -3,7 +3,7 @@ medium:
   path: "media/"
   definitions:
     whole_medium_no_carbon:
-      filename: "sist_min_media.csv"
+      filename: "sist_min_media.tsv"
       label: "Medium metabolites no carbon"
     min_media_no_carbon:
       filename: "m9_min_media.csv"
@@ -15,4 +15,8 @@ growth:
       medium: min_media_no_carbon
       filename: "biolog_results.csv"
       label: "no carbon data"
+    custom_carbon:
+      medium: whole_medium_no_carbon
+      filename: "custom_carbon.csv"
+      label: "custom carbon data"
 minimal_growth_rate: 0.05

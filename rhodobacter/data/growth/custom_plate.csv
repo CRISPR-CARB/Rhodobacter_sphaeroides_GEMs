@@ -1,6 +1,6 @@
 exchange,growth,uptake
 EX_succ_e,yes,25
 EX_etoh_e,yes,20
-EX_mal_e,yes,15
+#EX_mal_e,yes,15
 EX_cit_e,yes,20
-EX_glc_D_e,yes,10
+#EX_glc_D_e,yes,10

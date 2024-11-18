@@ -12,6 +12,7 @@ import pandas as pd
 import pathlib
 import sys
 import os
+import re
 sys.path.insert(0, "C:/Users/lint730/concerto") #this will have to be a local path
 from concerto.utils import load_universal_model
 from concerto.utils.biolog_help import add_biolog_exchanges
@@ -22,20 +23,47 @@ _log = logging.getLogger()
 _path = pathlib.Path(__file__).parent
 _f_path = _path.joinpath('C:/Users/lint730/GEM_repos/Rhodobacter_sphaeroides_GEMs/rhodobacter/data/growth/custom_plate.csv').__str__()
 
-starting_model = read_sbml_model("model.xml")
+starting_model = read_sbml_model("GEMs/iRsp1140_opt_compartment_updated.xml")
 output_model_name = 'model_gapfilled.xml'
 output_model_path = os.path.join(_path, output_model_name)
 
 def write_model(model):
     cobra.io.write_sbml_model(model, output_model_path)
 
-#imports adding biolog exchanges from concerto utils file
+#function to change the metabolite compartments in model from _c0 or _e0 to _c or _e
+def change_metabolite_compartment(model, target_compartments, compartment_id_change_dict):
+    model.compartments = target_compartments
+    for metabolite in model.metabolites:
+        # Change metabolite compartment
+        if metabolite.compartment in compartment_id_change_dict.keys():
+            metabolite.compartment = compartment_id_change_dict[metabolite.compartment]
+            # Change metabolite name and id
+            metabolite_base = re.search(r'^(.*)_\w{2}$', metabolite.name).group(1)
+            metabolite.name = metabolite_base+'_'+metabolite.compartment
+            metabolite_base = re.search(r'^(.*)_\w{2}$', metabolite.id).group(1)
+            metabolite.id = metabolite_base+'_'+metabolite.compartment
+    return model
+
+#define target_compartments and compartment_id_change_dict for change_metabolite_compartment function
+target_compartments = {
+    'c': 'cytosol',
+    'e': 'extracellular',
+    'p': 'periplasm'
+}
+compartment_id_change_dict = {
+    'c0': 'c',
+    'e0': 'e',
+    'p0': 'p'
+}
+
+#function to add biolog exchanges from concerto utils file
 def update_1(model):
     # add missing biolog reactions to model
     _log.info("Adding BL to prefix")
     model = add_biolog_exchanges(model)
     return model
 
+#function to add custom plate exchanges from concerto utils file
 def add_custom_plate_exchanges(model):
     """ Add missing custom_plate exchanges to cobra model
 
@@ -80,9 +108,11 @@ def add_custom_plate_exchanges(model):
   
     return new_model
 
+#function to execute all change to update the model
 def update_model():
     # Fix compartments
-    model = update_1(starting_model)
+    model = change_metabolite_compartment(starting_model, target_compartments, compartment_id_change_dict)  
+    model = update_1(model)
     model = add_custom_plate_exchanges(model)
     write_model(model)
 
