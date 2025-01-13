@@ -3,7 +3,7 @@
 # with most current biolog information
 #output file will overwite old generated model reports
 
-from memote.suite.cli.reports import diff
+#from memote.suite.cli.reports import diff
 import cobra
 import logging
 from cobra.manipulation.modify import rename_genes
@@ -23,7 +23,7 @@ _log = logging.getLogger()
 _path = pathlib.Path(__file__).parent
 _f_path = _path.joinpath('C:/Users/lint730/GEM_repos/Rhodobacter_sphaeroides_GEMs/rhodobacter/data/growth/custom_plate.csv').__str__()
 
-starting_model = read_sbml_model("GEMs/iRsp1140_opt_compartment_updated.xml")
+starting_model = read_sbml_model("GEMs/model_compartment_cleaned.xml")
 output_model_name = 'model_gapfilled.xml'
 output_model_path = os.path.join(_path, output_model_name)
 
@@ -33,15 +33,21 @@ def write_model(model):
 #function to change the metabolite compartments in model from _c0 or _e0 to _c or _e
 def change_metabolite_compartment(model, target_compartments, compartment_id_change_dict):
     model.compartments = target_compartments
+    _log.info("Removing 0 from metabolites and exchange reactions")
+    # Update metabolites
     for metabolite in model.metabolites:
-        # Change metabolite compartment
         if metabolite.compartment in compartment_id_change_dict.keys():
             metabolite.compartment = compartment_id_change_dict[metabolite.compartment]
-            # Change metabolite name and id
             metabolite_base = re.search(r'^(.*)_\w{2}$', metabolite.name).group(1)
-            metabolite.name = metabolite_base+'_'+metabolite.compartment
+            metabolite.name = metabolite_base + '_' + metabolite.compartment
             metabolite_base = re.search(r'^(.*)_\w{2}$', metabolite.id).group(1)
-            metabolite.id = metabolite_base+'_'+metabolite.compartment
+            metabolite.id = metabolite_base + '_' + metabolite.compartment
+
+    # Update reactions
+    for reaction in model.reactions:
+        if reaction.id.endswith('c0') or reaction.id.endswith('e0') or reaction.id.endswith('p0'):
+            reaction.id = reaction.id[:-1]
+
     return model
 
 #define target_compartments and compartment_id_change_dict for change_metabolite_compartment function
