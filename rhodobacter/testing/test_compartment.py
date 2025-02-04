@@ -1,4 +1,3 @@
-import pytest
 from cobra import Model, Metabolite
 import os
 import sys
@@ -7,7 +6,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 # Import the change_metabolite_compartment function
-from change_metabolite_compartment import change_metabolite_compartment
+from rhodobacter.testing.func_for_test import change_metabolite_compartment
 
 def test_change_metabolite_compartment():
     # Create a model with tricky metabolite IDs
