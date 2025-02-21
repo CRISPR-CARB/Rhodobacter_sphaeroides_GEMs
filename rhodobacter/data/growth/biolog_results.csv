@@ -15,7 +15,7 @@ EX_sbt_D_e,TRUE,10
 EX_glyc_e,TRUE,10
 EX_fuc_L_e,FALSE,0
 EX_glcur_e,TRUE,10
-EX_glcn_e,FALSE,10
+EX_glcn_e,FALSE,0
 EX_xyl_D_e,TRUE,10
 EX_lac_D_e,TRUE,10
 EX_for_e,TRUE,10
@@ -121,7 +121,7 @@ EX_ad_e,FALSE,0
 EX_alamd_e,TRUE,10
 EX_acglu_e,FALSE,0
 EX_arg__L_e,FALSE,0
-EX_gly_e,FALSE,10
+EX_gly_e,FALSE,0
 EX_his__L_e,FALSE,0
 EX_hom__L_E,FALSE,0
 EX_ile__L_e,TRUE,10
