@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" sboTerm="SBO:0000624" level="3" version="1" fbc:required="false">
+  <model metaid="meta_universal_reactions" id="universal_reactions" fbc:strict="true">
+    <listOfUnitDefinitions>
+      <unitDefinition id="mmol_per_gDW_per_hr">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+          <unit kind="gram" exponent="-1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="c" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="M_atp_c" name="ATP_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-3" fbc:chemicalFormula="C10H13N5O13P3">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00002</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_f6p_c" name="D_fructose_6_phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C6H12O9P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00072</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_adp_c" name="ADP_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C10H13N5O10P2">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00008</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_fdp_c" name="D_fructose_1_6_bisphosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="C6H12O12P2">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00290</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_h_c" name="H_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="1" fbc:chemicalFormula="H">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00067</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_g3p_c" name="Glyceraldehyde3_phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C3H6O6P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00102</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_s7p_c" name="Sedoheptulose7_phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C7H14O10P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00238</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_e4p_c" name="D_Erythrose4_phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C4H8O7P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00236</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_fru_c" name="D_Fructose_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H12O6">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00082</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_gln__45__L_c" name="L_Glutamine_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C5H10N2O3">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00053</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_gam6p_c" name="D_Glucosamine_phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="C6H14NO8P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00288</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_glu__45__L_c" name="L_Glutamate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C5H8NO4">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00023</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_g6p_c" name="D_glucose_6_phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C6H12O9P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00079</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_h2o_c" name="H2O_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="0" fbc:chemicalFormula="H2O">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00001</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_pi_c" name="Phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-2" fbc:chemicalFormula="HO4P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00009</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_xu5p__45__D_c" name="D_Xylulose5_phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C5H10O8P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00198</p>
+          </html>
+        </notes>
+      </species>
+      <species id="M_man6p_c" name="D_mannose_6_phosphate_c" compartment="c" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false" fbc:charge="-1" fbc:chemicalFormula="C6H12O9P">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>seed.id: cpd00235</p>
+          </html>
+        </notes>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_lb" value="-1000" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_ub" value="1000" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_0_bound" value="0" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="minus_inf" value="-INF" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="plus_inf" value="INF" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="R_RXN0416_c" name="ATP_D_fructose_6_phosphate_1_phosphotransferase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>GENE ASSOCIATION: [&apos;RSP_2334&apos;]</p>
+            <p>KEGG RID: [&apos;R00756&apos;]</p>
+            <p>PROTEIN ASSOCIATION: [&apos;RSP_2334&apos;]</p>
+            <p>PROTEIN CLASS: [&apos;2.7.1.11&apos;]</p>
+          </html>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="M_atp_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_f6p_c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_fdp_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h_c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_RSP_2334"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_RXN0560_c" name="sedoheptulose_7_phosphate_D_glyceraldehyde_3_phosphate" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>GENE ASSOCIATION: [&apos;RSP_0561&apos;]</p>
+            <p>KEGG RID: [&apos;R08575&apos;]</p>
+            <p>PROTEIN ASSOCIATION: [&apos;RSP_0561&apos;]</p>
+            <p>PROTEIN CLASS: [&apos;2.2.1.2&apos;]</p>
+          </html>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="M_g3p_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_s7p_c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_e4p_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_f6p_c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_RSP_0561"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_RXN0343_c" name="ATP_D_fructose_6_phosphotransferase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>GENE ASSOCIATION: [&apos;RSP_2257&apos;]</p>
+            <p>KEGG RID: [&apos;R00760&apos;]</p>
+            <p>PROTEIN ASSOCIATION: [&apos;RSP_2257&apos;]</p>
+            <p>PROTEIN CLASS: [&apos;2.7.1.1&apos;]</p>
+          </html>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="M_fru_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_atp_c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_adp_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_f6p_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_h_c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_RSP_2257"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_RXN0046_c" name="L_glutamine_D_fructose_6_phosphate_isomerase_deaminating" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>GENE ASSOCIATION: [&apos;(RSP_1447 or RSP_2502)&apos;]</p>
+            <p>KEGG RID: [&apos;R00768&apos;]</p>
+            <p>PROTEIN ASSOCIATION: [&apos;(RSP_1447 or RSP_2502)&apos;]</p>
+            <p>PROTEIN CLASS: [&apos;2.6.1.16&apos;]</p>
+          </html>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="M_gln__45__L_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_f6p_c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_gam6p_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_glu__45__L_c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_RSP_1447"/>
+            <fbc:geneProductRef fbc:geneProduct="G_RSP_2502"/>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_RXN0415_c" name="D_glucose_6_phosphate_aldose_ketose_isomerase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>GENE ASSOCIATION: [&apos;RSP_2736&apos;]</p>
+            <p>KEGG RID: [&apos;R02740&apos;]</p>
+            <p>PROTEIN ASSOCIATION: [&apos;RSP_2736&apos;]</p>
+            <p>PROTEIN CLASS: [&apos;5.3.1.9&apos;]</p>
+          </html>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="M_g6p_c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_f6p_c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_RSP_2736"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_RXN0556_c" name="D_Fructose_1_6_bisphosphate_1_phosphohydrolase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>GENE ASSOCIATION: [&apos;(RSP_1285 or RSP_0404 or RSP_3266)&apos;]</p>
+            <p>KEGG RID: [&apos;R00762&apos;]</p>
+            <p>PROTEIN ASSOCIATION: [&apos;(RSP_1285 or RSP_0404 or RSP_3266)&apos;]</p>
+            <p>PROTEIN CLASS: [&apos;3.1.3.11&apos;]</p>
+          </html>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="M_h2o_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_fdp_c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_pi_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_f6p_c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_RSP_3266"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_RXN0553_c" name="D_Fructose_6_phosphate_D_glyceraldehyde_3_phosphate_glycolaldehyde" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>GENE ASSOCIATION: [&apos;(RSP_2956 or RSP_3268)&apos;]</p>
+            <p>KEGG RID: [&apos;R01830&apos;]</p>
+            <p>PROTEIN ASSOCIATION: [&apos;(RSP_2956 or RSP_3268)&apos;]</p>
+            <p>PROTEIN CLASS: [&apos;2.2.1.1&apos;]</p>
+          </html>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="M_f6p_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_g3p_c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_xu5p__45__D_c" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_e4p_c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:geneProductRef fbc:geneProduct="G_RSP_2956"/>
+        </fbc:geneProductAssociation>
+      </reaction>
+      <reaction id="R_RXN0345_c" name="D_mannose_6_phosphate_aldose_ketose_isomerase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <p>GENE ASSOCIATION: [&apos;(RSP_0834 or RSP_4053)&apos;]</p>
+            <p>KEGG RID: [&apos;R01819&apos;]</p>
+            <p>PROTEIN ASSOCIATION: [&apos;(RSP_0834 or RSP_4053)&apos;]</p>
+            <p>PROTEIN CLASS: [&apos;5.3.1.8&apos;]</p>
+          </html>
+        </notes>
+        <listOfReactants>
+          <speciesReference species="M_man6p_c" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_f6p_c" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:or>
+            <fbc:geneProductRef fbc:geneProduct="G_RSP_0834"/>
+            <fbc:geneProductRef fbc:geneProduct="G_RSP_4053"/>
+          </fbc:or>
+        </fbc:geneProductAssociation>
+      </reaction>
+    </listOfReactions>
+    <fbc:listOfObjectives fbc:activeObjective="obj">
+      <fbc:objective fbc:id="obj" fbc:type="maximize"/>
+    </fbc:listOfObjectives>
+    <fbc:listOfGeneProducts>
+      <fbc:geneProduct fbc:id="G_RSP_2334" fbc:name="G_RSP_2334" fbc:label="G_RSP_2334"/>
+      <fbc:geneProduct fbc:id="G_RSP_0561" fbc:name="G_RSP_0561" fbc:label="G_RSP_0561"/>
+      <fbc:geneProduct fbc:id="G_RSP_2257" fbc:name="G_RSP_2257" fbc:label="G_RSP_2257"/>
+      <fbc:geneProduct fbc:id="G_RSP_2502" fbc:name="G_RSP_2502" fbc:label="G_RSP_2502"/>
+      <fbc:geneProduct fbc:id="G_RSP_1447" fbc:name="G_RSP_1447" fbc:label="G_RSP_1447"/>
+      <fbc:geneProduct fbc:id="G_RSP_2736" fbc:name="G_RSP_2736" fbc:label="G_RSP_2736"/>
+      <fbc:geneProduct fbc:id="G_RSP_3266" fbc:name="G_RSP_3266" fbc:label="G_RSP_3266"/>
+      <fbc:geneProduct fbc:id="G_RSP_2956" fbc:name="G_RSP_2956" fbc:label="G_RSP_2956"/>
+      <fbc:geneProduct fbc:id="G_RSP_0834" fbc:name="G_RSP_0834" fbc:label="G_RSP_0834"/>
+      <fbc:geneProduct fbc:id="G_RSP_4053" fbc:name="G_RSP_4053" fbc:label="G_RSP_4053"/>
+    </fbc:listOfGeneProducts>
+  </model>
+</sbml>

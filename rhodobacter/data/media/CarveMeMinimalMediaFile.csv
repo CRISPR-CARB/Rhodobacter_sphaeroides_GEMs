@@ -131,14 +131,9 @@ BL[Dara14lac],Biolog D-Arabinono-1-4-lactone Media,so4,Sulfate
 BL[Dara14lac],Biolog D-Arabinono-1-4-lactone Media,mg2,Magnesium
 BL[Dara14lac],Biolog D-Arabinono-1-4-lactone Media,fe3,Iron
 BL[Dara14lac],Biolog D-Arabinono-1-4-lactone Media,Dara14lac,D-Arabinono-1-4-lactone C5H8O5
-SI,SIST Minimal Media,k,Potassium
-SI,SIST Minimal Media,so4,Sulfate
-SI,SIST Minimal Media,nh4,Ammonium
-SI,SIST Minimal Media,cl,Chloride
 SI,SIST Minimal Media,succ,Succinate
-SI,SIST Minimal Media,glu__D,D-Glutamate
+#SI,SIST Minimal Media,glu__D,D-Glutamate
 SI,SIST Minimal Media,asp__L,L-Aspartate
-SI,SIST Minimal Media,na1,Sodium
 SI,SIST Minimal Media,mg2,Magnesium
 SI,SIST Minimal Media,ca2,Calcium
 SI,SIST Minimal Media,fe,Iron
@@ -147,4 +142,4 @@ SI,SIST Minimal Media,zn2,Zinc
 SI,SIST Minimal Media,mn2,Manganese
 SI,SIST Minimal Media,cu,Copper
 SI,SIST Minimal Media,no3,Nitrate
-SI,SIST Minimal Media,cobalt2,Cobalt
+#SI,SIST Minimal Media,cobalt2,Cobalt
